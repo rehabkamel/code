@@ -10,7 +10,7 @@
   #define ULTRASONIC_PIN_OUTPUT     9 //بيعرف طرف خرج الالتراسونك موصل علي الرجل 9
   #define ULTRASONIC_TIMER_US       50000 
   SoftwareSerial bluetoothSerial(0,1);     //RX, TX
-  AF_DCMotor motor1(1, MOTOR12_1KHZ);
+  AF_DCMotor motor1(1, MOTOR12_1KHZ); 
   AF_DCMotor motor2(2, MOTOR12_1KHZ);
   AF_DCMotor motor3(3, MOTOR34_1KHZ);
   AF_DCMotor motor4(4, MOTOR34_1KHZ);
@@ -18,8 +18,9 @@
   volatile long ultrasonic_distance = 0;
 
 
-void setup(){
-  bluetoothSerial.begin(115200);  
+void setup() دالة تحتوى علي الأوامر التي يتم تنفيذها في اول البرنامج ولمره واحده 
+{  //قوس فتح الداله
+  bluetoothSerial.begin(115200);  // 
   Serial.begin(115200);
   gforceSerial.begin(115200);
   pinMode(ULTRASONIC_PIN_INPUT, INPUT_PULLUP);
