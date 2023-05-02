@@ -24,9 +24,9 @@ void setup() دالة تحتوى علي الأوامر التي يتم تنفي�
   bluetoothSerial.begin(115200);  // 
   Serial.begin(115200);
   gforceSerial.begin(115200);
-  pinMode(ULTRASONIC_PIN_INPUT, INPUT_PULLUP);
-  pinMode(ULTRASONIC_PIN_OUTPUT, OUTPUT);
-  Timer1.initialize(ULTRASONIC_TIMER_US);
+  pinMode(ULTRASONIC_PIN_INPUT, INPUT_PULLUP);//يتم تعريف حاله الطرف أنه طرف إدخال 
+  pinMode(ULTRASONIC_PIN_OUTPUT, OUTPUT);//يتم تعريف حاله الطرف انه طرف اخراج
+  Timer1.initialize(ULTRASONIC_TIMER_US); 
   Timer1.attachInterrupt(ultrasonicPulse);
   attachInterrupt(digitalPinToInterrupt(ULTRASONIC_PIN_INPUT), ultrasonicEcho, FALLING);
 }
@@ -37,8 +37,9 @@ void loop()//داله تحتوى علي أوامر يتم تنفيذها أكث�
 struct GF_Data gForceData;
 struct GF_Euler Euler;
 GF_Ret ret = GFC_GetgForceData((&gForceData), Timeout);
-  if(ultrasonic_distance >= 30)
+  if(ultrasonic_distance >= 30)//داله شرطيه(اذا كانت المسافه المقاسه بالالتراسونك اكبر من أو تساوى) 
 {
+فتح قوس لداله الداله الشرطيه الأولي 
     if (GF_RET_OK == ret) {
       GF_Gesture gesture;
       switch (gForceData.type){
