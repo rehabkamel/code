@@ -1,12 +1,13 @@
-  #include <Arduino.h>
-  #include <TimerOne.h>
-  #include <gForceAdapterC.h>
-  #include <AFMotor.h>
-  #include <SoftwareSerial.h>
-  #define gforceSerial Serial
-  #define Timeout 1000                      //initial motors pin
-  #define ULTRASONIC_PIN_INPUT      2
-  #define ULTRASONIC_PIN_OUTPUT     9
+  #include <Arduino.h>//إستدعاء المكتبة الخاصة بالاردوينو
+  #include <TimerOne.h>//إستدعاء المكتبة الخاصة بالتايمر المساعد للالتراسونك 
+  #include <gForceAdapterC.h>//إستدعاء المكتبة الخاصة بالحساس 
+  #include <AFMotor.h>//إستدعاء المكتبة الخاصة بالسيرفو موتور
+  #include <SoftwareSerial.h>//تعريف الأطراف الخاصة بالشاشه 
+  #define gforceSerial Serial //تعريف الأطراف الخاصة بالحساس 
+  #define Timeout 1000                  //initial
+ motors pin
+  #define ULTRASONIC_PIN_INPUT      2 //بيعرف طرف إدخال الالتراسونك موصل علي الرجل 2
+  #define ULTRASONIC_PIN_OUTPUT     9 //بيعرف طرف خرج الالتراسونك موصل علي الرجل 9
   #define ULTRASONIC_TIMER_US       50000 
   SoftwareSerial bluetoothSerial(0,1);     //RX, TX
   AF_DCMotor motor1(1, MOTOR12_1KHZ);
