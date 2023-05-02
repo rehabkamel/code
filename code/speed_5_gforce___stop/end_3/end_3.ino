@@ -31,11 +31,14 @@ void setup() دالة تحتوى علي الأوامر التي يتم تنفي�
   attachInterrupt(digitalPinToInterrupt(ULTRASONIC_PIN_INPUT), ultrasonicEcho, FALLING);
 }
 
-void loop() {
+void loop()//داله تحتوى علي أوامر يتم تنفيذها أكثر من مرة
+{
+//قوس فتح الداله
 struct GF_Data gForceData;
 struct GF_Euler Euler;
 GF_Ret ret = GFC_GetgForceData((&gForceData), Timeout);
-  if(ultrasonic_distance >= 30){
+  if(ultrasonic_distance >= 30)
+{
     if (GF_RET_OK == ret) {
       GF_Gesture gesture;
       switch (gForceData.type){
