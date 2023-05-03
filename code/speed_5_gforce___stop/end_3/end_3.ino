@@ -39,8 +39,9 @@ struct GF_Euler Euler;
 GF_Ret ret = GFC_GetgForceData((&gForceData), Timeout);
   if(ultrasonic_distance >= 30)//داله شرطيه(اذا كانت المسافه المقاسه بالالتراسونك اكبر من أو تساوى) 
 {
-فتح قوس لداله الداله الشرطيه الأولي 
-    if (GF_RET_OK == ret) {
+فتح قوس الداله الشرطيه الأولي //
+    if (GF_RET_OK == ret)//داله شرطيه() 
+ { فتح قوس الداله الشرطيه الثانيه//
       GF_Gesture gesture;
       switch (gForceData.type){
       case GF_Data::QUATERNION:
@@ -48,11 +49,16 @@ GF_Ret ret = GFC_GetgForceData((&gForceData), Timeout);
       break;
       case GF_Data::GESTURE:
       gesture = gForceData.value.gesture;
-      if (gesture == GF_FIST ){
-      forward();
-      }
-      else if (gesture == GF_SPREAD){
-      back();
+//الحركات الخاصة بالتحريك 
+      if (gesture == GF_FIST ) // اذا  كانت الحركه المطبقه علي الحساس FIST 
+سوف يتم تنفيذ ما بداخل  داله  forward 
+{//  ifقوس فتح دالة  
+      forward();//داله الحركه الي الأمام 
+      }//قوس غلق داله if
+      else if (gesture == GF_SPREAD)
+سوف يتم تنفيذ ما بداخل  داله  forward 
+{ فتح قوس داله else if 
+      back(); 
       }
       else if (gesture == GF_WAVEIN){
       forward_right();
