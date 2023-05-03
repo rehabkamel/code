@@ -52,19 +52,20 @@ GF_Ret ret = GFC_GetgForceData((&gForceData), Timeout);
 //الحركات الخاصة بالتحريك 
       if (gesture == GF_FIST ) // اذا  كانت الحركه المطبقه علي الحساس FIST 
 سوف يتم تنفيذ ما بداخل  داله  forward 
-{//  ifقوس فتح دالة  
+{// ifقوس فتح دالة  
       forward();//داله الحركه الي الأمام 
       }//قوس غلق داله if
-      else if (gesture == GF_SPREAD)
-سوف يتم تنفيذ ما بداخل  داله  forward 
-{ فتح قوس داله else if 
-      back(); 
-      }
-      else if (gesture == GF_WAVEIN){
-      forward_right();
-      }
-      else if (gesture == GF_WAVEOUT){
-      forward_left();
+      else if (gesture == GF_SPREAD)//اذا كانت الحركه المطبقه علي الحساس SPREAD سوف يتم تنفيذ   دالة back ما بداخل  
+{//فتح قوس داله else if 
+      back();// دالة الحركة الي الخلف 
+      }//قوس غلق else if
+      else if (gesture == GF_WAVEIN)//إذا كانت الحركة المطبقه على الحساس WAVEINيتم تنفيذ ما بداخل داله forward right 
+{//قوس فتح else if 
+      forward_right();//دالة الحركة الي الأمام يمين 
+      }//قوس غلق else if 
+      else if (gesture == GF_WAVEOUT)//إذا كانت الحركة المطبقه على الحساس WAVEOUTيتم تنفيذ ما بداخل داله forward left
+{//قوس فتح else if 
+      forward_left();// 
       }
       else if (gesture == GF_PINCH){
       left();
