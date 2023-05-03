@@ -65,17 +65,20 @@ GF_Ret ret = GFC_GetgForceData((&gForceData), Timeout);
       }//قوس غلق else if 
       else if (gesture == GF_WAVEOUT)//إذا كانت الحركة المطبقه على الحساس WAVEOUTيتم تنفيذ ما بداخل داله forward left
 {//قوس فتح else if 
-      forward_left();// 
-      }
-      else if (gesture == GF_PINCH){
-      left();
-      }
-      else if (gesture == GF_SHOOT){      
-      right();
-      }
-      else if (gesture == GF_RELEASE){
-      Stop();
-      }
+      forward_left();// دالة الحركة الي الأمام يسار 
+      }//قوس غلق else if 
+      else if (gesture == GF_PINCH)//إذا كانت الحركة المطبقه على الحساس PINCHيتم تنفيذ ما بداخل داله left 
+{//قوس فتح else if 
+      left();//دالة الحركة يسار 
+      }//قوس غلق else if 
+      else if (gesture == GF_SHOOT)//إذا كانت الحركة المطبقه على الحساس SHOOT يتم تنفيذ ما بداخل داله right 
+{    //قوس فتحelse if  
+      right();//دالة الحركة الي اليمين
+      }//قوس غلق else if 
+      else if (gesture == GF_RELEASE)//إذا كانت الحركة المطبقه على الحساس RELEASEيتم تنفيذ ما بداخل داله stop 
+{    //قوس فتح else if 
+      Stop();//دالة الوقوف 
+      }قوس غلق else if 
       break;
       default:
       break;
