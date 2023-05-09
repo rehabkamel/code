@@ -24,8 +24,8 @@ void setup() دالة تحتوى علي الأوامر التي يتم تنفي�
   bluetoothSerial.begin(115200);  // 
   Serial.begin(115200);
   gforceSerial.begin(115200);
-  pinMode(ULTRASONIC_PIN_INPUT, INPUT_PULLUP);//يتم تعريف حاله الطرف أنه طرف إدخال 
-  pinMode(ULTRASONIC_PIN_OUTPUT, OUTPUT);//يتم تعريف حاله الطرف انه طرف اخراج
+  pinMode(ULTRASONIC_PIN_INPUT, INPUT_PULLUP);//يتم تعريف حاله الطرف ultrasonicpin input أنه طرف إدخال 
+  pinMode(ULTRASONIC_PIN_OUTPUT, OUTPUT);//يتم تعريف حاله الطرف ultrasonicpinoutput انه طرف اخراج
   Timer1.initialize(ULTRASONIC_TIMER_US);//التايمر بيعد في طرف trig 
   Timer1.attachInterrupt(ultrasonicPulse);//التايمر بيستقبل من طرف echo 
   attachInterrupt(digitalPinToInterrupt(ULTRASONIC_PIN_INPUT), ultrasonicEcho, FALLING);
