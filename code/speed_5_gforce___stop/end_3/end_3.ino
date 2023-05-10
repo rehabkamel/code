@@ -2,12 +2,12 @@
   #include <TimerOne.h>//إستدعاء المكتبة الخاصة بالتايمر المساعد للالتراسونك 
   #include <gForceAdapterC.h>//إستدعاء المكتبة الخاصة بالحساس 
   #include <AFMotor.h>//إستدعاء المكتبة الخاصة  ب AF Shield
-  #include <SoftwareSerial.h>//تعريف الأطراف الخاصة بالشاشه 
+  #include <SoftwareSerial.h>//تنفيذ برنامج للإتصال التسلسلي لاستخدام منافذ تسلسليه اضافيه علي الاردوينو
   #define gforceSerial Serial //تعريف الأطراف الخاصة بالحساس 
   #define Timeout //وقت استقبال اشارة جديدة 1000                  //initial
  motors pin
-  #define ULTRASONIC_PIN_INPUT      2 //بيعرف طرف إدخال الالتراسونك موصل علي الرجل 2
-  #define ULTRASONIC_PIN_OUTPUT     9 //بيعرف طرف خرج الالتراسونك موصل علي الرجل 9
+  #define ULTRASONIC_PIN_INPUT      2 //بيعرف طرف echo الالتراسونك موصل علي الرجل 2
+  #define ULTRASONIC_PIN_OUTPUT     9 //بيعرف طرف trig الالتراسونك موصل علي الرجل 9
   #define ULTRASONIC_TIMER_US       50000 
   SoftwareSerial bluetoothSerial(0,1);     //RX, TX
   AF_DCMotor motor1(1, MOTOR12_1KHZ); 
