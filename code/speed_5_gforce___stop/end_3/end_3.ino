@@ -1,7 +1,7 @@
   #include <Arduino.h>//إستدعاء المكتبة الخاصة بالاردوينو
   #include <TimerOne.h>//إستدعاء المكتبة الخاصة بالتايمر المساعد للالتراسونك 
   #include <gForceAdapterC.h>//إستدعاء المكتبة الخاصة بالحساس 
-  #include <AFMotor.h>//إستدعاء المكتبة الخاصة  ب AF Shell
+  #include <AFMotor.h>//إستدعاء المكتبة الخاصة  ب AF Shield
   #include <SoftwareSerial.h>//تعريف الأطراف الخاصة بالشاشه 
   #define gforceSerial Serial //تعريف الأطراف الخاصة بالحساس 
   #define Timeout //وقت استقبال اشارة جديدة 1000                  //initial
