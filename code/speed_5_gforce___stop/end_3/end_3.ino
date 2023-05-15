@@ -81,7 +81,7 @@ GF_Ret ret = GFC_GetgForceData((&gForceData), Timeout);
       }قوس غلق else if 
       break;// يتم ايقاف الحلقه عند تحقق الشرط 
       default:// في حالة عدم تحقيق الشرط يتم تنفيذ ما بداخل default
-      break;
+      break; يتم تشغيل ما بداخل الحاله فقط وليس كل ما بعدها 
       }
     }
     else {            //else rate
